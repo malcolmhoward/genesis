@@ -35,8 +35,22 @@ git remote add upstream https://github.com/The-OASIS-Project/genesis.git
 
 ### Step 3: Create a Feature Branch
 
+**Never work directly on `main`**. Always create a branch.
+
+**First, verify the correct issue number:**
+
 ```bash
-git checkout -b type/description
+# List open issues to find the right issue number
+gh issue list --repo malcolmhoward/genesis
+```
+
+**Then create your branch with that issue number:**
+
+```bash
+git checkout -b feat/genesis/<issue#>-description
+
+# Example: Working on issue #2
+git checkout -b feat/genesis/2-foundation-files
 ```
 
 ---
